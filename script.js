@@ -56,19 +56,21 @@ navLinks.forEach(link => {
     });
 });
 
-// Smooth scrolling for navigation links
+// Smooth scrolling for same-page anchors only
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
-        
-        if (targetSection) {
-            const offsetTop = targetSection.offsetTop - 80; // Increased offset for navbar
-            window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-            });
+        const href = link.getAttribute('href');
+        // Only intercept clicks for same-page anchors like '#about'
+        if (href && href.startsWith('#')) {
+            e.preventDefault();
+            const targetSection = document.querySelector(href);
+            if (targetSection) {
+                const offsetTop = targetSection.offsetTop - 80; // Increased offset for navbar
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
         }
     });
 });

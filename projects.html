@@ -28,8 +28,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
+        /* Ensure body uses theme variables */
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+        }
+
         .project-gallery {
             padding: 120px 0 80px;
+            background-color: var(--bg-primary);
         }
         
         .project-item {
@@ -87,6 +94,7 @@
         
         .project-screenshots {
             padding: 40px;
+            background-color: var(--bg-primary);
         }
         
         .screenshots-grid {
@@ -102,6 +110,7 @@
             overflow: hidden;
             box-shadow: 0 4px 20px var(--shadow-medium);
             transition: transform 0.3s ease;
+            background-color: var(--bg-primary);
         }
         
         .screenshot-item:hover {
@@ -201,8 +210,76 @@
             transform: translateX(-5px);
             box-shadow: 0 6px 25px var(--shadow-medium);
         }
-        
+
+        /* Mobile responsive improvements */
         @media (max-width: 768px) {
+            /* Fix navbar for mobile */
+            .navbar {
+                padding: 0.5rem 1rem;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                background: var(--bg-primary);
+                backdrop-filter: blur(10px);
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            .nav-container {
+                max-width: 100%;
+                padding: 0;
+            }
+
+            .nav-logo h3 {
+                font-size: 1.2rem;
+            }
+
+            .hamburger {
+                display: flex;
+                z-index: 1001;
+            }
+
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 60px;
+                flex-direction: column;
+                background: var(--bg-primary);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                width: 100%;
+                text-align: center;
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+                padding: 1rem;
+                border: none;
+                border-radius: 0;
+                gap: 0.5rem;
+                max-height: calc(100vh - 60px);
+                overflow-y: auto;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-link {
+                padding: 12px 20px;
+                margin: 4px 8px;
+                border-radius: 8px;
+                font-size: 1rem;
+            }
+
+            /* Adjust main content to account for fixed navbar */
+            main {
+                padding-top: 60px;
+            }
+
+            .project-gallery {
+                padding: 80px 0 60px;
+            }
+
             .project-header {
                 padding: 30px 20px;
             }
@@ -224,10 +301,46 @@
                 position: static;
                 margin-bottom: 30px;
             }
+
+            .back-btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            /* Theme toggle adjustments */
+            .theme-toggle {
+                top: 15px;
+                right: 15px;
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h3>Gerald Albacite</h3>
+            </div>
+            <ul class="nav-menu" role="menubar">
+                <li role="none"><a href="index.html#home" class="nav-link" role="menuitem">Home</a></li>
+                <li role="none"><a href="index.html#about" class="nav-link" role="menuitem">About</a></li>
+                <li role="none"><a href="index.html#experience" class="nav-link" role="menuitem">Experience</a></li>
+                <li role="none"><a href="index.html#skills" class="nav-link" role="menuitem">Skills</a></li>
+                <li role="none"><a href="index.html#projects" class="nav-link" role="menuitem">Projects</a></li>
+                <li role="none"><a href="index.html#contact" class="nav-link" role="menuitem">Contact</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+            </button>
+        </div>
+    </nav>
+
     <!-- Dark Mode Toggle -->
     <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
         <i class="fas fa-sun" aria-hidden="true"></i>
