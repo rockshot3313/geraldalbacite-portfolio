@@ -99,6 +99,39 @@ portfolio/
 └── README.md           # This file
 ```
 
+## Deployment
+
+Your portfolio is now deployed and available at:
+- **GitHub Repository**: https://github.com/rockshot3313/geraldalbacite-portfolio
+
+### Deployment Options
+
+#### 1. **Netlify (Recommended)**
+1. Go to [netlify.com](https://netlify.com) and sign up
+2. Click "New site from Git"
+3. Connect your GitHub account and select this repository
+4. Deploy settings: Build command: (leave empty), Publish directory: (leave empty)
+5. Click "Deploy site" - Your site will be live in minutes!
+
+#### 2. **GitHub Pages**
+1. Go to your repository: https://github.com/rockshot3313/geraldalbacite-portfolio
+2. Click "Settings" tab
+3. Scroll down to "Pages" section
+4. Under "Source", select "Deploy from a branch"
+5. Select "main" branch and "/ (root)" folder
+6. Click "Save"
+7. Your site will be available at: `https://rockshot3313.github.io/geraldalbacite-portfolio/`
+
+#### 3. **Vercel**
+1. Go to [vercel.com](https://vercel.com) and sign up
+2. Click "New Project"
+3. Import your GitHub repository
+4. Deploy with default settings
+5. Your site will be live instantly!
+
+### Custom Domain
+After deployment, you can add a custom domain like `geraldalbacite.com` through your hosting provider's settings.
+
 ## Contact
 
 - **Email**: gerald.albacite@email.com
