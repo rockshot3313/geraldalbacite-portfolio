@@ -231,6 +231,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    overflow: hidden;
     /* Profile image */
     background-image: url('gerald.jpg');
 }
@@ -828,6 +829,8 @@ body {
     .profile-avatar {
         width: 200px;
         height: 200px;
+        background-size: cover;
+        background-position: center;
     }
 
     .profile-avatar i {
@@ -915,6 +918,17 @@ body {
     .btn {
         padding: 10px 20px;
         font-size: 0.9rem;
+    }
+
+    .profile-avatar {
+        width: 150px;
+        height: 150px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .profile-avatar i {
+        font-size: 3rem;
     }
 
     .projects-grid {
