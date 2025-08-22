@@ -1,18 +1,20 @@
 # Gerald Albacite - Portfolio Website
 
-A modern, responsive portfolio website showcasing my experience as a Full-Stack Developer, Technical Specialist, and Graphic Designer.
+A modern, responsive portfolio website showcasing my experience as a Full-Stack Developer, Technical Specialist, and Graphic Designer with comprehensive project showcases.
 
 ## About
 
-This portfolio highlights my professional journey, including my current role at Davao del Sur State College where I develop and maintain e-FIMS (Electronic Financial Information Management System) and e-HRIS (Electronic Human Resource Information System) using Laravel PHP.
+This portfolio highlights my professional journey, including my current role at Davao del Sur State College where I develop and maintain e-FIMS (Electronic Financial Information Management System) and e-HRIS (Electronic Human Resource Information System) using Laravel PHP. The portfolio features detailed project screenshots, interactive elements, and a professional design that demonstrates my technical expertise and design capabilities.
 
 ## Features
 
 - **Responsive Design**: Fully responsive layout that works on all devices
-- **Modern UI/UX**: Clean, professional design with smooth animations
-- **Interactive Elements**: Animated skill bars, floating icons, and scroll effects
+- **Modern UI/UX**: Clean, professional design with smooth animations and dark/light mode toggle
+- **Interactive Elements**: Animated skill bars, floating icons, scroll effects, and hover animations
+- **Project Showcases**: Detailed project screenshots with comprehensive descriptions
 - **Contact Form**: Functional contact form with validation
 - **Smooth Navigation**: Smooth scrolling and active section highlighting
+- **SEO Optimized**: Meta tags, sitemap, and structured data for better search visibility
 
 ## Technologies Used
 
@@ -24,12 +26,15 @@ This portfolio highlights my professional journey, including my current role at 
 
 ## Sections
 
-1. **Hero Section**: Introduction with animated floating icons
-2. **About**: Professional background and statistics
-3. **Experience**: Timeline of work experience with detailed descriptions
-4. **Skills**: Interactive skill bars organized by category
-5. **Projects**: Featured projects including e-FIMS and e-HRIS systems
+1. **Hero Section**: Introduction with animated floating icons and call-to-action buttons
+2. **About**: Professional background and statistics with detailed experience overview
+3. **Experience**: Timeline of work experience with detailed descriptions and achievements
+4. **Skills**: Interactive skill bars organized by category (Frontend, Backend, Database, Tools)
+5. **Projects**: Featured projects with detailed screenshots and technical information
+   - **e-FIMS System**: Procurement dashboard, admin panel, and attendance management
+   - **e-HRIS System**: Employee dashboard, account management, and travel order tracking
 6. **Contact**: Contact form and professional contact information
+7. **Project Screenshots Page**: Dedicated page with comprehensive project showcases
 
 ## Setup Instructions
 
@@ -85,19 +90,42 @@ Replace the profile icon in the hero section:
 ## Performance Features
 
 - **Optimized Images**: Uses CSS gradients and Font Awesome icons for fast loading
-- **Efficient Animations**: Hardware-accelerated CSS animations
+- **Efficient Animations**: Hardware-accelerated CSS animations and smooth transitions
 - **Lazy Loading**: Intersection Observer API for smooth scroll animations
 - **Responsive Images**: Scalable vector icons and CSS-based graphics
+- **Project Screenshots**: High-quality screenshots with optimized loading
+- **Dark/Light Mode**: Theme toggle with persistent user preference
 
 ## File Structure
 
 ```
 portfolio/
-├── index.html          # Main HTML file
-├── styles.css          # CSS styles and animations
-├── script.js           # JavaScript functionality
-└── README.md           # This file
+├── index.html              # Main portfolio page
+├── projects.html           # Detailed project screenshots page
+├── styles.css              # CSS styles and animations
+├── script.js               # JavaScript functionality
+├── favicon.svg             # Website favicon
+├── robots.txt              # SEO robots file
+├── sitemap.xml             # XML sitemap for SEO
+├── screenshots/            # Project screenshot directory
+│   ├── efims/             # e-FIMS system screenshots
+│   └── e-hris/            # e-HRIS system screenshots
+└── README.md               # This file
 ```
+
+## Recent Updates
+
+### Latest Portfolio Enhancements (August 2024)
+
+- **Comprehensive Project Showcases**: Added detailed screenshots for both e-FIMS and e-HRIS systems
+- **Enhanced Project Descriptions**: Updated all project descriptions to accurately reflect functionality
+- **Improved Layout**: Better responsive design with consistent card heights and spacing
+- **Dark/Light Mode**: Added theme toggle functionality with persistent user preferences
+- **SEO Optimization**: Added meta tags, sitemap, and robots.txt for better search visibility
+- **Professional Screenshots**: High-quality screenshots showcasing:
+  - **e-FIMS System**: Procurement dashboard, admin panel, user management, and attendance modules
+  - **e-HRIS System**: Employee dashboard, account management, and travel order tracking
+- **Removed Placeholder Content**: Replaced all placeholder content with actual project showcases
 
 ## Deployment
 
