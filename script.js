@@ -12,10 +12,9 @@ function initializeTheme() {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
         document.documentElement.setAttribute('data-theme', savedTheme);
-    } else if (prefersDarkScheme.matches) {
-        document.documentElement.setAttribute('data-theme', 'dark');
     } else {
-        document.documentElement.setAttribute('data-theme', 'light');
+        // Default to dark mode
+        document.documentElement.setAttribute('data-theme', 'dark');
     }
 }
 

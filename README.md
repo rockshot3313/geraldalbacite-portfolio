@@ -115,7 +115,7 @@ portfolio/
 
 ## Recent Updates
 
-### Latest Portfolio Enhancements (August 2024)
+### Latest Portfolio Enhancements (August 2025)
 
 - **Comprehensive Project Showcases**: Added detailed screenshots for both e-FIMS and e-HRIS systems
 - **Enhanced Project Descriptions**: Updated all project descriptions to accurately reflect functionality
@@ -180,4 +180,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-**Built with ❤️ by Gerald Albacite**
+**Built with ❤️ by Gerald Albacite - 2025**
