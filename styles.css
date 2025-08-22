@@ -231,8 +231,8 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* Uncomment the line below and replace 'profile.jpg' with your image filename */
-    /* background-image: url('profile.jpg'); */
+    /* Profile image */
+    background-image: url('gerald.jpg');
 }
 
 .profile-avatar i {
