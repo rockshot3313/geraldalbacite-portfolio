@@ -1088,7 +1088,7 @@ body {
         left: 0;
         right: 0;
         z-index: 1000;
-        background: var(--bg-primary);
+        background: rgba(255, 255, 255, 0.85);
         backdrop-filter: blur(10px);
         border-bottom: 1px solid var(--border-color);
     }
@@ -1096,6 +1096,10 @@ body {
     .nav-container {
         max-width: 100%;
         padding: 0;
+    }
+
+    [data-theme="dark"] .navbar {
+        background: rgba(15, 23, 42, 0.85);
     }
 
     .nav-logo h3 {
