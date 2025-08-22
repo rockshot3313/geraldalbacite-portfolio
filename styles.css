@@ -228,11 +228,21 @@ body {
     border: 2px solid rgba(255, 255, 255, 0.2);
     position: relative;
     z-index: 2;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Uncomment the line below and replace 'profile.jpg' with your image filename */
+    /* background-image: url('profile.jpg'); */
 }
 
 .profile-avatar i {
     font-size: 6rem;
     color: rgba(255, 255, 255, 0.8);
+}
+
+/* Hide the icon when profile image is used */
+.profile-avatar.has-image i {
+    display: none;
 }
 
 .floating-icons {
