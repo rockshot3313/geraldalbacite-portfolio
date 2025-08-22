@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://geraldalbacite.com/sitemap.xml
+
+# Crawl-delay for search engines
+Crawl-delay: 1
+
+# Preferred search engine information
+# Gerald Albacite Portfolio - Full-Stack Developer

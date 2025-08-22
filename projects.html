@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Screenshots - Gerald Albacite</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="View detailed screenshots and information about Gerald Albacite's projects including e-FIMS and e-HRIS systems">
+    <meta name="keywords" content="Gerald Albacite, Project Screenshots, e-FIMS, e-HRIS, Laravel Projects, Web Development">
+    <meta name="author" content="Gerald Albacite">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://geraldalbacite.com/projects.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Project Screenshots - Gerald Albacite">
+    <meta property="og:description" content="Detailed screenshots and information about Gerald's web development projects">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://geraldalbacite.com/projects.html">
+    <meta property="og:image" content="https://geraldalbacite.com/gerald.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .project-gallery {
+            padding: 120px 0 80px;
+        }
+        
+        .project-item {
+            margin-bottom: 80px;
+            background: var(--bg-secondary);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px var(--shadow-medium);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .project-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 48px var(--shadow-medium);
+        }
+        
+        .project-header {
+            padding: 40px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+        
+        .project-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .project-subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .project-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+        
+        .project-tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .tech-badge {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .project-screenshots {
+            padding: 40px;
+        }
+        
+        .screenshots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .screenshot-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px var(--shadow-medium);
+            transition: transform 0.3s ease;
+        }
+        
+        .screenshot-item:hover {
+            transform: scale(1.02);
+        }
+        
+        .screenshot-placeholder {
+            background: var(--bg-accent);
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            border: 2px dashed var(--border-color);
+        }
+        
+        .screenshot-placeholder i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            opacity: 0.5;
+        }
+        
+        .screenshot-caption {
+            padding: 15px;
+            background: var(--bg-primary);
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .screenshot-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 5px;
+        }
+        
+        .screenshot-description {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .project-link:hover {
+            background: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+        
+        .project-link.secondary {
+            background: var(--bg-accent);
+            color: var(--text-primary);
+        }
+        
+        .project-link.secondary:hover {
+            background: var(--border-color);
+        }
+        
+        .back-to-portfolio {
+            position: fixed;
+            top: 100px;
+            left: 30px;
+            z-index: 100;
+        }
+        
+        .back-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            box-shadow: 0 4px 20px var(--shadow-medium);
+            transition: all 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 6px 25px var(--shadow-medium);
+        }
+        
+        @media (max-width: 768px) {
+            .project-header {
+                padding: 30px 20px;
+            }
+            
+            .project-title {
+                font-size: 2rem;
+            }
+            
+            .project-screenshots {
+                padding: 30px 20px;
+            }
+            
+            .screenshots-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .back-to-portfolio {
+                position: static;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Dark Mode Toggle -->
+    <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <i class="fas fa-sun" aria-hidden="true"></i>
+        <i class="fas fa-moon" aria-hidden="true"></i>
+    </button>
+    
+    <!-- Back to Portfolio -->
+    <div class="back-to-portfolio">
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+            Back to Portfolio
+        </a>
+    </div>
+    
+    <!-- Main Content -->
+    <main>
+        <section class="project-gallery">
+            <div class="container">
+                <h1 class="section-title">Project Screenshots & Details</h1>
+                <p class="section-subtitle" style="text-align: center; margin-bottom: 60px; color: var(--text-secondary);">
+                    Detailed view of my projects with screenshots and technical information
+                </p>
+                
+                <!-- e-FIMS Project -->
+                <div class="project-item">
+                    <div class="project-header">
+                        <h2 class="project-title">e-FIMS System</h2>
+                        <p class="project-subtitle">Electronic Financial Information Management System</p>
+                        <p class="project-description">
+                            A comprehensive financial tracking and reporting system built for Davao del Sur State College. 
+                            This system manages budget allocation, expense tracking, financial reporting, and provides 
+                            real-time insights into institutional finances.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-badge">Laravel</span>
+                            <span class="tech-badge">PHP</span>
+                            <span class="tech-badge">MySQL</span>
+                            <span class="tech-badge">Bootstrap</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">jQuery</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-screenshots">
+                                                 <div class="screenshots-grid">
+                             <div class="screenshot-item">
+                                 <img src="screenshots/efims/image.png" alt="e-FIMS Procurement Dashboard" style="width: 100%; height: 250px; object-fit: cover;">
+                                 <div class="screenshot-caption">
+                                     <div class="screenshot-title">Procurement Dashboard</div>
+                                     <div class="screenshot-description">Light-themed procurement dashboard with financial metrics, notification statistics, line item budget tracking, and comprehensive filter options</div>
+                                 </div>
+                             </div>
+                             
+                             <div class="screenshot-item">
+                                 <img src="screenshots/efims/Screenshot 2025-08-22 162009.png" alt="e-FIMS Main Dashboard" style="width: 100%; height: 250px; object-fit: cover;">
+                                 <div class="screenshot-caption">
+                                     <div class="screenshot-title">Main Dashboard</div>
+                                     <div class="screenshot-description">Dark-themed admin dashboard with system overview cards showing total users, entities, signatories, and security statistics</div>
+                                 </div>
+                             </div>
+                             
+                             <div class="screenshot-item">
+                                 <img src="screenshots/efims/Screenshot 2025-08-22 162115.png" alt="e-FIMS Admin Dashboard" style="width: 100%; height: 250px; object-fit: cover;">
+                                 <div class="screenshot-caption">
+                                     <div class="screenshot-title">Admin Dashboard</div>
+                                     <div class="screenshot-description">User account management interface with comprehensive user statistics, profile details, and user privilege controls</div>
+                                 </div>
+                             </div>
+                             
+                             <div class="screenshot-item">
+                                 <img src="screenshots/efims/Screenshot 2025-08-22 162202.png" alt="e-FIMS Attendance & Event Management" style="width: 100%; height: 250px; object-fit: cover;">
+                                 <div class="screenshot-caption">
+                                     <div class="screenshot-title">Attendance & Event Management</div>
+                                     <div class="screenshot-description">Event creation form with time scheduling options, visibility settings, and comprehensive event management features</div>
+                                 </div>
+                             </div>
+                         </div>
+                        
+                        <div class="project-links">
+                            <a href="https://github.com/Server101-DSSC/eFIMS" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <i class="fab fa-github"></i>
+                                View Repository
+                            </a>
+                            <a href="index.html#contact" class="project-link secondary">
+                                <i class="fas fa-envelope"></i>
+                                Request Access
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- e-HRIS Project -->
+                <div class="project-item">
+                    <div class="project-header">
+                        <h2 class="project-title">e-HRIS System</h2>
+                        <p class="project-subtitle">Electronic Human Resource Information System</p>
+                        <p class="project-description">
+                            A comprehensive HR management system for Davao del Sur State College that handles 
+                            employee data, attendance tracking, payroll management, and HR operations. 
+                            Streamlines administrative processes and improves data accuracy.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-badge">Laravel</span>
+                            <span class="tech-badge">PHP</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">MySQL</span>
+                            <span class="tech-badge">Bootstrap</span>
+                            <span class="tech-badge">AJAX</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-screenshots">
+                                                 <div class="screenshots-grid">
+                             <div class="screenshot-item">
+                                 <img src="screenshots/e-hris/Screenshot 2025-08-22 162651.png" alt="e-HRIS Main Dashboard" style="width: 100%; height: 250px; object-fit: cover;">
+                                 <div class="screenshot-caption">
+                                     <div class="screenshot-title">Main Dashboard</div>
+                                     <div class="screenshot-description">Employee dashboard with welcome message, quick action cards for leave, payroll, and travel orders, personal statistics, and biometric data tracking</div>
+                                 </div>
+                             </div>
+                             
+                             <div class="screenshot-item">
+                                 <img src="screenshots/e-hris/Screenshot 2025-08-22 162737.png" alt="e-HRIS Account Management" style="width: 100%; height: 250px; object-fit: cover;">
+                                 <div class="screenshot-caption">
+                                     <div class="screenshot-title">Account Management</div>
+                                     <div class="screenshot-description">Admin module for managing user accounts with comprehensive user statistics, profile details, and user privilege management</div>
+                                 </div>
+                             </div>
+                             
+                             <div class="screenshot-item">
+                                 <img src="screenshots/e-hris/Screenshot 2025-08-22 162853.png" alt="e-HRIS Travel Order Dashboard" style="width: 100%; height: 250px; object-fit: cover;">
+                                 <div class="screenshot-caption">
+                                     <div class="screenshot-title">Travel Order Dashboard</div>
+                                     <div class="screenshot-description">Module-specific dashboard showing travel order statistics, pending/completed travels, and comprehensive analytics with export functionality</div>
+                                 </div>
+                             </div>
+                         </div>
+                        
+                        <div class="project-links">
+                            <a href="https://github.com/acepogz/e-HRIS" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <i class="fab fa-github"></i>
+                                View Repository
+                            </a>
+                            <a href="index.html#contact" class="project-link secondary">
+                                <i class="fas fa-envelope"></i>
+                                Request Access
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Gerald Albacite. All rights reserved.</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/rockshot3313" target="_blank" class="social-link" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.facebook.com/00endlesslove" target="_blank" class="social-link" title="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://x.com/geraldgotdz" target="_blank" class="social-link" title="X (Twitter)">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                    <a href="mailto:geraldalbacite.org@gmail.com" class="social-link" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

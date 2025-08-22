@@ -3,10 +3,50 @@ const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 const navLinks = document.querySelectorAll('.nav-link');
 
+// Dark mode functionality
+const themeToggle = document.querySelector('.theme-toggle');
+const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+// Initialize theme
+function initializeTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    } else if (prefersDarkScheme.matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+    }
+}
+
+// Toggle theme
+function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    
+    // Add visual feedback
+    themeToggle.style.transform = 'translateY(-50%) scale(0.9)';
+    setTimeout(() => {
+        themeToggle.style.transform = 'translateY(-50%) scale(1)';
+    }, 150);
+}
+
+// Theme toggle event listener
+if (themeToggle) {
+    themeToggle.addEventListener('click', toggleTheme);
+}
+
 // Toggle mobile menu
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
+    
+    // Update aria-expanded for accessibility
+    const isExpanded = navMenu.classList.contains('active');
+    hamburger.setAttribute('aria-expanded', isExpanded);
 });
 
 // Close mobile menu when clicking on a link
@@ -34,15 +74,13 @@ navLinks.forEach(link => {
     });
 });
 
-// Navbar background change on scroll
+// Enhanced navbar background change on scroll
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
     } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = 'none';
+        navbar.classList.remove('scrolled');
     }
 });
 
@@ -119,40 +157,98 @@ const observeElements = () => {
     });
 };
 
-// Contact form handling
+// Enhanced contact form handling
 const contactForm = document.querySelector('.contact-form form');
 if (contactForm) {
+    // Real-time validation
+    const inputs = contactForm.querySelectorAll('input, textarea');
+    inputs.forEach(input => {
+        input.addEventListener('blur', validateField);
+        input.addEventListener('input', clearErrors);
+    });
+    
+    function validateField(e) {
+        const field = e.target;
+        const errorElement = document.getElementById(field.getAttribute('aria-describedby'));
+        
+        // Clear previous errors
+        errorElement.textContent = '';
+        errorElement.classList.remove('show');
+        field.classList.remove('error');
+        
+        // Validate based on field type
+        let isValid = true;
+        let errorMessage = '';
+        
+        if (field.hasAttribute('required') && !field.value.trim()) {
+            isValid = false;
+            errorMessage = `${field.placeholder} is required`;
+        } else if (field.type === 'email' && field.value && !isValidEmail(field.value)) {
+            isValid = false;
+            errorMessage = 'Please enter a valid email address';
+        } else if (field.name === 'name' && field.value && field.value.length < 2) {
+            isValid = false;
+            errorMessage = 'Name must be at least 2 characters';
+        } else if (field.name === 'message' && field.value && field.value.length < 10) {
+            isValid = false;
+            errorMessage = 'Message must be at least 10 characters';
+        }
+        
+        if (!isValid) {
+            errorElement.textContent = errorMessage;
+            errorElement.classList.add('show');
+            field.classList.add('error');
+        }
+        
+        return isValid;
+    }
+    
+    function clearErrors(e) {
+        const field = e.target;
+        const errorElement = document.getElementById(field.getAttribute('aria-describedby'));
+        if (field.value.trim()) {
+            errorElement.classList.remove('show');
+            field.classList.remove('error');
+        }
+    }
+    
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
+        // Validate all fields
+        let isFormValid = true;
+        inputs.forEach(input => {
+            if (!validateField({ target: input })) {
+                isFormValid = false;
+            }
+        });
+        
+        if (!isFormValid) {
+            showNotification('Please fix the errors above', 'error');
+            return;
+        }
+        
         // Get form data
-        const formData = new FormData(contactForm);
-        const name = contactForm.querySelector('input[type="text"]').value;
-        const email = contactForm.querySelector('input[type="email"]').value;
-        const subject = contactForm.querySelectorAll('input[type="text"]')[1].value;
-        const message = contactForm.querySelector('textarea').value;
+        const name = contactForm.querySelector('#contact-name').value;
+        const email = contactForm.querySelector('#contact-email').value;
+        const subject = contactForm.querySelector('#contact-subject').value;
+        const message = contactForm.querySelector('#contact-message').value;
         
-        // Simple validation
-        if (!name || !email || !subject || !message) {
-            showNotification('Please fill in all fields', 'error');
-            return;
-        }
-        
-        if (!isValidEmail(email)) {
-            showNotification('Please enter a valid email address', 'error');
-            return;
-        }
-        
-        // Simulate form submission
+        // Simulate form submission with loading state
         const submitBtn = contactForm.querySelector('.btn');
-        const originalText = submitBtn.textContent;
-        submitBtn.textContent = 'Sending...';
+        const btnText = submitBtn.querySelector('.btn-text');
+        const btnLoading = submitBtn.querySelector('.btn-loading');
+        
+        btnText.style.display = 'none';
+        btnLoading.style.display = 'inline';
         submitBtn.disabled = true;
         
+        // In a real implementation, you would send the data to your backend
         setTimeout(() => {
             showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
             contactForm.reset();
-            submitBtn.textContent = originalText;
+            btnText.style.display = 'inline';
+            btnLoading.style.display = 'none';
             submitBtn.disabled = false;
         }, 2000);
     });
@@ -266,6 +362,9 @@ const typeWriter = (element, text, speed = 100) => {
 
 // Initialize animations when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize theme
+    initializeTheme();
+    
     // Initialize observers
     observeSkillBars();
     observeElements();
@@ -358,14 +457,4 @@ window.addEventListener('resize', () => {
     }
 });
 
-// Add CSS for active nav link
-const style = document.createElement('style');
-style.textContent = `
-    .nav-link.active {
-        color: #2563eb !important;
-    }
-    .nav-link.active::after {
-        width: 100% !important;
-    }
-`;
-document.head.appendChild(style);
+// Enhanced active nav link styling is now in CSS

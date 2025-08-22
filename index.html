@@ -4,77 +4,155 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerald Albacite - Full-Stack Developer & Technical Specialist</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Gerald Albacite - Experienced Full-Stack Developer specializing in Laravel PHP, e-FIMS, and e-HRIS systems at Davao del Sur State College. Expert in web development, technical support, and graphic design.">
+    <meta name="keywords" content="Gerald Albacite, Full-Stack Developer, Laravel PHP, Web Developer, e-FIMS, e-HRIS, Technical Support, Graphic Designer, Davao del Sur">
+    <meta name="author" content="Gerald Albacite">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://geraldalbacite.com">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Gerald Albacite - Full-Stack Developer & Technical Specialist">
+    <meta property="og:description" content="Experienced Full-Stack Developer specializing in Laravel PHP systems, e-FIMS, and e-HRIS solutions. Expert in web development and technical support.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://geraldalbacite.com">
+    <meta property="og:image" content="https://geraldalbacite.com/gerald.jpg">
+    <meta property="og:site_name" content="Gerald Albacite Portfolio">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gerald Albacite - Full-Stack Developer">
+    <meta name="twitter:description" content="Full-Stack Developer specializing in Laravel PHP, e-FIMS, and e-HRIS systems">
+    <meta name="twitter:image" content="https://geraldalbacite.com/gerald.jpg">
+    <meta name="twitter:site" content="@geraldgotdz">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="gerald.jpg" as="image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Gerald Albacite",
+        "jobTitle": "Full-Stack Developer",
+        "description": "Experienced Full-Stack Developer specializing in Laravel PHP, Filament v3/v4, Livewire, React, Vue.js, and AI integration",
+        "url": "https://geraldalbacite.com",
+        "image": "https://geraldalbacite.com/gerald.jpg",
+        "email": "geraldalbacite.org@gmail.com",
+        "telephone": "+639674191024",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Sta. Cruz Zone 3",
+            "addressRegion": "Davao del Sur",
+            "addressCountry": "Philippines"
+        },
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Davao del Sur State College"
+        },
+        "knowsAbout": ["Laravel", "Filament v3", "Filament v4", "Livewire", "React", "Vue.js", "PHP", "JavaScript", "MySQL", "AI Integration", "Laravel Herd", "ChatGPT API", "Machine Learning", "Web Development", "Technical Support", "Graphic Design"],
+        "sameAs": [
+            "https://github.com/rockshot3313",
+            "https://www.facebook.com/00endlesslove",
+            "https://x.com/geraldgotdz"
+        ]
+    }
+    </script>
 </head>
 <body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <!-- Dark Mode Toggle -->
+    <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <i class="fas fa-sun" aria-hidden="true"></i>
+        <i class="fas fa-moon" aria-hidden="true"></i>
+    </button>
+    
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
             <div class="nav-logo">
                 <h3>Gerald Albacite</h3>
             </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+            <ul class="nav-menu" role="menubar">
+                <li role="none"><a href="#home" class="nav-link" role="menuitem">Home</a></li>
+                <li role="none"><a href="#about" class="nav-link" role="menuitem">About</a></li>
+                <li role="none"><a href="#experience" class="nav-link" role="menuitem">Experience</a></li>
+                <li role="none"><a href="#skills" class="nav-link" role="menuitem">Skills</a></li>
+                <li role="none"><a href="#projects" class="nav-link" role="menuitem">Projects</a></li>
+                <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+            </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Hi, I'm <span class="highlight">Gerald Albacite</span>
-                </h1>
-                <h2 class="hero-subtitle">Full-Stack Developer & Technical Specialist</h2>
-                <p class="hero-description">
-                    Passionate developer specializing in Laravel PHP systems, currently building 
-                    e-FIMS and e-HRIS solutions at Davao del Sur State College. 
-                    Experienced in full-stack development, technical support, and graphic design.
+    <!-- Main Content -->
+    <main id="main">
+        <!-- Hero Section -->
+        <section id="home" class="hero" aria-labelledby="hero-title">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 id="hero-title" class="hero-title">
+                        Hi, I'm <span class="highlight">Gerald Albacite</span>
+                    </h1>
+                    <h2 class="hero-subtitle">Full-Stack Developer & Technical Specialist</h2>
+                                    <p class="hero-description">
+                    Passionate full-stack developer specializing in Laravel PHP systems and modern web technologies. 
+                    Currently building e-FIMS and e-HRIS solutions at Davao del Sur State College. 
+                    Experienced in full-stack development, technical support, and graphic design with expertise in modern frameworks and tools.
                 </p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                    <a href="#projects" class="btn btn-secondary">View My Work</a>
+                                    <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary" aria-describedby="contact-desc">Get In Touch</a>
+                    <a href="#projects" class="btn btn-secondary" aria-describedby="projects-desc">View My Work</a>
+                    <span id="contact-desc" class="sr-only">Contact Gerald Albacite</span>
+                    <span id="projects-desc" class="sr-only">View Gerald's portfolio projects</span>
+                </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-card">
+                        <div class="profile-avatar has-image" id="profileAvatar" role="img" aria-label="Gerald Albacite profile photo">
+                            <i class="fas fa-user" aria-hidden="true"></i>
+                        </div>
+                        <div class="floating-icons" aria-hidden="true">
+                            <div class="icon-item" style="--delay: 0s" aria-label="Laravel & Filament expertise">
+                                <i class="fab fa-laravel"></i>
+                            </div>
+                            <div class="icon-item" style="--delay: 0.5s" aria-label="React expertise">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <div class="icon-item" style="--delay: 1s" aria-label="Vue.js expertise">
+                                <i class="fab fa-vuejs"></i>
+                            </div>
+                            <div class="icon-item" style="--delay: 1.5s" aria-label="AI & Machine Learning">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="icon-item" style="--delay: 2s" aria-label="Modern development tools">
+                                <i class="fas fa-code-branch"></i>
+                            </div>
+                            <div class="icon-item" style="--delay: 2.5s" aria-label="PHP & Livewire">
+                                <i class="fab fa-php"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="profile-card">
-                    <div class="profile-avatar has-image" id="profileAvatar">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="floating-icons">
-                        <div class="icon-item" style="--delay: 0s">
-                            <i class="fab fa-laravel"></i>
-                        </div>
-                        <div class="icon-item" style="--delay: 0.5s">
-                            <i class="fab fa-php"></i>
-                        </div>
-                        <div class="icon-item" style="--delay: 1s">
-                            <i class="fab fa-js-square"></i>
-                        </div>
-                        <div class="icon-item" style="--delay: 1.5s">
-                            <i class="fas fa-tools"></i>
-                        </div>
-                        <div class="icon-item" style="--delay: 2s">
-                            <i class="fas fa-paint-brush"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
     <!-- About Section -->
     <section id="about" class="about">
@@ -139,6 +217,7 @@
                                 <li>Database design and optimization for large-scale data processing</li>
                                 <li>System integration and API development</li>
                                 <li>User training and technical documentation</li>
+                                <li>Modern web development with responsive design and user-friendly interfaces</li>
                             </ul>
                             <div class="tech-tags">
                                 <span class="tech-tag">Laravel</span>
@@ -146,6 +225,7 @@
                                 <span class="tech-tag">MySQL</span>
                                 <span class="tech-tag">JavaScript</span>
                                 <span class="tech-tag">Bootstrap</span>
+                                <span class="tech-tag">Web Development</span>
                             </div>
                         </div>
                     </div>
@@ -251,6 +331,30 @@
                                 <div class="skill-progress" style="width: 87%"></div>
                             </div>
                         </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Filament v3/v4</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Livewire</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">React</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Vue.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -277,6 +381,18 @@
                             <span class="skill-name">System Installation</span>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Laravel Herd</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">DevOps & Deployment</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 82%"></div>
                             </div>
                         </div>
                     </div>
@@ -314,6 +430,39 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-robot"></i>
+                        AI & Modern Tools
+                    </h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">AI Integration</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">ChatGPT API</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Machine Learning</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Automation Tools</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -331,18 +480,23 @@
                         <h3 class="project-title">e-FIMS System</h3>
                         <p class="project-description">
                             Electronic Financial Information Management System for Davao del Sur State College. 
-                            Comprehensive financial tracking, reporting, and budget management platform.
+                            Comprehensive financial tracking, budget management, and reporting system built with Laravel PHP framework.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Laravel</span>
                             <span class="tech-tag">PHP</span>
                             <span class="tech-tag">MySQL</span>
                             <span class="tech-tag">Bootstrap</span>
+                            <span class="tech-tag">JavaScript</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i>
-                                Live Demo
+                            <a href="https://github.com/Server101-DSSC/eFIMS" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <i class="fab fa-github"></i>
+                                View Repository
+                            </a>
+                            <a href="projects.html" class="project-link">
+                                <i class="fas fa-images"></i>
+                                View Screenshots
                             </a>
                         </div>
                     </div>
@@ -365,9 +519,43 @@
                             <span class="tech-tag">MySQL</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i>
-                                Live Demo
+                            <a href="https://github.com/acepogz/e-HRIS" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <i class="fab fa-github"></i>
+                                View Repository
+                            </a>
+                            <a href="projects.html" class="project-link">
+                                <i class="fas fa-images"></i>
+                                View Screenshots
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Modern Admin Dashboard</h3>
+                        <p class="project-description">
+                            Advanced admin panel built with Filament v3/v4 featuring comprehensive analytics, 
+                            automated reporting, and modern data management.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Filament v3</span>
+                            <span class="tech-tag">Filament v4</span>
+                            <span class="tech-tag">Laravel Herd</span>
+                            <span class="tech-tag">Livewire</span>
+                            <span class="tech-tag">Modern UI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/rockshot3313" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <i class="fab fa-github"></i>
+                                View Code
+                            </a>
+                            <a href="#contact" class="project-link">
+                                <i class="fas fa-envelope"></i>
+                                Request Demo
                             </a>
                         </div>
                     </div>
@@ -381,7 +569,7 @@
                         <h3 class="project-title">Design Portfolio</h3>
                         <p class="project-description">
                             Collection of graphic design work including brand identities, 
-                            print materials, and digital assets created for various clients.
+                            print materials, and digital assets from my creative projects.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Adobe Creative Suite</span>
@@ -389,9 +577,9 @@
                             <span class="tech-tag">Illustrator</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fas fa-images"></i>
-                                View Gallery
+                            <a href="#contact" class="project-link">
+                                <i class="fas fa-envelope"></i>
+                                Request Portfolio
                             </a>
                         </div>
                     </div>
@@ -400,69 +588,82 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Let's Connect</h3>
-                    <p>
-                        I'm always interested in discussing new opportunities, 
-                        collaborating on projects, or sharing knowledge about 
-                        full-stack development and system design.
-                    </p>
-                    <div class="contact-methods">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>Personal Email</h4>
-                                <p>geraldalbacite.org@gmail.com</p>
+            <!-- Contact Section -->
+        <section id="contact" class="contact" aria-labelledby="contact-title">
+            <div class="container">
+                <h2 id="contact-title" class="section-title">Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Let's Connect</h3>
+                        <p>
+                            I'm always interested in discussing new opportunities, 
+                            collaborating on projects, or sharing knowledge about 
+                            full-stack development and system design.
+                        </p>
+                        <div class="contact-methods" role="list">
+                            <div class="contact-item" role="listitem">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                                <div>
+                                    <h4>Personal Email</h4>
+                                    <p><a href="mailto:geraldalbacite.org@gmail.com">geraldalbacite.org@gmail.com</a></p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-briefcase"></i>
-                            <div>
-                                <h4>Work Email</h4>
-                                <p>gerald.albacite@dssc.edu.ph</p>
+                            <div class="contact-item" role="listitem">
+                                <i class="fas fa-briefcase" aria-hidden="true"></i>
+                                <div>
+                                    <h4>Work Email</h4>
+                                    <p><a href="mailto:gerald.albacite@dssc.edu.ph">gerald.albacite@dssc.edu.ph</a></p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <h4>Phone</h4>
-                                <p>+63 967 419 1024</p>
+                            <div class="contact-item" role="listitem">
+                                <i class="fas fa-phone" aria-hidden="true"></i>
+                                <div>
+                                    <h4>Phone</h4>
+                                    <p><a href="tel:+639674191024">+63 967 419 1024</a></p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Location</h4>
-                                <p>Sta. Cruz Zone 3, Davao del Sur, Philippines</p>
+                            <div class="contact-item" role="listitem">
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                <div>
+                                    <h4>Location</h4>
+                                    <p>Sta. Cruz Zone 3, Davao del Sur, Philippines</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="contact-form">
-                    <form>
-                        <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
+                    <div class="contact-form">
+                        <form aria-labelledby="contact-form-title" novalidate>
+                            <h3 id="contact-form-title" class="sr-only">Contact Form</h3>
+                            <div class="form-group">
+                                <label for="contact-name" class="sr-only">Your Name</label>
+                                <input type="text" id="contact-name" name="name" placeholder="Your Name" required aria-describedby="name-error">
+                                <span id="name-error" class="error-message" role="alert"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email" class="sr-only">Your Email</label>
+                                <input type="email" id="contact-email" name="email" placeholder="Your Email" required aria-describedby="email-error">
+                                <span id="email-error" class="error-message" role="alert"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-subject" class="sr-only">Subject</label>
+                                <input type="text" id="contact-subject" name="subject" placeholder="Subject" required aria-describedby="subject-error">
+                                <span id="subject-error" class="error-message" role="alert"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-message" class="sr-only">Your Message</label>
+                                <textarea id="contact-message" name="message" placeholder="Your Message" rows="5" required aria-describedby="message-error"></textarea>
+                                <span id="message-error" class="error-message" role="alert"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-loading" aria-hidden="true">Sending...</span>
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -490,5 +691,16 @@
     </footer>
 
     <script src="script.js"></script>
+    
+    <!-- Google Analytics (replace GA_MEASUREMENT_ID with your actual ID) -->
+    <!-- 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);} 
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    -->
 </body>
 </html>
