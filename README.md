@@ -134,8 +134,10 @@ After deployment, you can add a custom domain like `geraldalbacite.com` through 
 
 ## Contact
 
-- **Email**: gerald.albacite@email.com
-- **Location**: Davao del Sur, Philippines
+- **Personal Email**: geraldalbacite.org@gmail.com
+- **Work Email**: gerald.albacite@dssc.edu.ph
+- **Phone**: +63 967 419 1024
+- **Location**: Sta. Cruz Zone 3, Davao del Sur, Philippines
 - **Current Position**: Full-Stack Developer at Davao del Sur State College
 
 ## License
