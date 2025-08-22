@@ -140,6 +140,12 @@ After deployment, you can add a custom domain like `geraldalbacite.com` through 
 - **Location**: Sta. Cruz Zone 3, Davao del Sur, Philippines
 - **Current Position**: Full-Stack Developer at Davao del Sur State College
 
+### Connect with Gerald
+
+- **GitHub**: [github.com/rockshot3313](https://github.com/rockshot3313)
+- **Facebook**: [facebook.com/00endlesslove](https://www.facebook.com/00endlesslove)
+- **X (Twitter)**: [x.com/geraldgotdz](https://x.com/geraldgotdz)
+
 ## License
 
 This project is open source and available under the [MIT License](LICENSE).
