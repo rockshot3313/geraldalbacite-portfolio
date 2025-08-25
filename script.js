@@ -65,7 +65,7 @@ navLinks.forEach(link => {
             e.preventDefault();
             const targetSection = document.querySelector(href);
             if (targetSection) {
-                const offsetTop = targetSection.offsetTop - 80; // Increased offset for navbar
+                const offsetTop = targetSection.offsetTop - 100; // Increased offset for navbar
                 window.scrollTo({
                     top: offsetTop,
                     behavior: 'smooth'
@@ -92,7 +92,7 @@ window.addEventListener('scroll', () => {
     
     let current = '';
     sections.forEach(section => {
-        const sectionTop = section.offsetTop - 120; // Increased offset for better detection
+        const sectionTop = section.offsetTop - 150; // Increased offset for better detection
         const sectionHeight = section.clientHeight;
         if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
             current = section.getAttribute('id');
